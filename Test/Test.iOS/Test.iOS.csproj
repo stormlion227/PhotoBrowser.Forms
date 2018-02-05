@@ -123,6 +123,16 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
+    <ProjectReference Include="..\..\PhotoBrowser\PhotoBrowser.iOS\PhotoBrowser.iOS.csproj">
+      <Project>{3efa9aac-e7eb-4d56-9fb3-1153a1324aa1}</Project>
+      <Name>PhotoBrowser.iOS</Name>
+      <IsAppExtension>false</IsAppExtension>
+      <IsWatchApp>false</IsWatchApp>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PhotoBrowser\PhotoBrowser\PhotoBrowser.csproj">
+      <Project>{25b09430-f62b-4243-8fe9-3e66722ae25f}</Project>
+      <Name>PhotoBrowser</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Test\Test.csproj">
       <Project>{F2E2687B-206C-4F10-BBBF-2452E4FD3E4C}</Project>
       <Name>Test</Name>
