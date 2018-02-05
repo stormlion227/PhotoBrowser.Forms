@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Stormlion.PhotoBrowser.Android</RootNamespace>
-    <AssemblyName>Stormlion.PhotoBrowser.Droid</AssemblyName>
+    <RootNamespace>Stormlion.PhotoBrowser.Droid</RootNamespace>
+    <AssemblyName>Stormlion.PhotoBrowser.Android</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
@@ -38,12 +38,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bolts.AppLinks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Bolts.1.4.0.1\lib\MonoAndroid403\Bolts.AppLinks.dll</HintPath>
+    </Reference>
+    <Reference Include="Bolts.Tasks, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Bolts.1.4.0.1\lib\MonoAndroid403\Bolts.Tasks.dll</HintPath>
+    </Reference>
     <Reference Include="FormsViewGroup, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.5.0.122203\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="Naxam.Fresco.Droid, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Naxam.Fresco.Droid.1.5.0\lib\MonoAndroid10\Naxam.Fresco.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.FrescoCore.Droid, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Naxam.FrescoCore.Droid.1.5.0\lib\MonoAndroid10\Naxam.FrescoCore.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.FrescoDrawee.Droid, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Naxam.FrescoDrawee.Droid.1.5.0\lib\MonoAndroid10\Naxam.FrescoDrawee.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.FrescoImagePipeline.Droid, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Naxam.FrescoImagePipeline.Droid.1.5.0\lib\MonoAndroid10\Naxam.FrescoImagePipeline.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="Naxam.FrescoImagePipelineBase.Droid, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Naxam.FrescoImagePipelineBase.Droid.1.5.0\lib\MonoAndroid10\Naxam.FrescoImagePipelineBase.Droid.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -119,6 +140,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PhotoBrowserImplementation.cs" />
+    <Compile Include="Platform.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -127,6 +150,14 @@
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Binding\Android\FrescoImageViewer\FrescoImageViewer.csproj">
+      <Project>{5bf83dca-6a9b-44c7-9043-33020a623351}</Project>
+      <Name>FrescoImageViewer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Binding\Android\PhotoDraweeView\PhotoDraweeView.csproj">
+      <Project>{0f034a8c-7c72-430b-a0fe-3574e88707f3}</Project>
+      <Name>PhotoDraweeView</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PhotoBrowser\PhotoBrowser.csproj">
       <Project>{25b09430-f62b-4243-8fe9-3e66722ae25f}</Project>
       <Name>PhotoBrowser</Name>

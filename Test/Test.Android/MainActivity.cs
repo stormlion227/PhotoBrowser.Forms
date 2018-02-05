@@ -19,6 +19,8 @@ namespace Test.Droid
 
             base.OnCreate(bundle);
 
+            Stormlion.PhotoBrowser.Droid.Platform.Init(this);
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }

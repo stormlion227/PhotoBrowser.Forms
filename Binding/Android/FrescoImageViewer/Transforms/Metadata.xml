@@ -7,6 +7,7 @@
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
 
-  <attr path="/api/package[@name='com.stfalcon.frescoimageviewer']/interface[@name='OnDismissListener']" name="visibility">public</attr>
+  <!-- <attr path="/api/package[@name='com.stfalcon.frescoimageviewer']/interface[@name='OnDismissListener']" name="visibility">public</attr> -->
+  <remove-node path="/api/package[@name='com.stfalcon.frescoimageviewer']/interface[@name='OnDismissListener']" />
   
 </metadata>
