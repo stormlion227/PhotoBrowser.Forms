@@ -31,7 +31,9 @@ namespace Stormlion.PhotoBrowser.iOS
 
             MWPhotoBrowser browser = new MWPhotoBrowser(this);
 
-            browser.AlwaysShowControls = true;
+            browser.AlwaysShowControls = _photoBrowser.AlwaysShowControls;
+            browser.DisplayActionButton = _photoBrowser.ActionButtonPressed != null;
+            browser.SetCurrentPhoto((nuint)_photoBrowser.StartIndex);
 
             UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(new UINavigationController(browser), true, null);
         }

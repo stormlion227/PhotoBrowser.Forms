@@ -13,6 +13,10 @@ namespace Stormlion.PhotoBrowser
 
         public ImageSource ActionIcon { get; set; }
 
+        public bool AlwaysShowControls { get; set; } = false;
+
+        public int StartIndex { get; set; } = 0;
+
         public void Show()
         {
             DependencyService.Get<IPhotoBrowser>().Show(this);
