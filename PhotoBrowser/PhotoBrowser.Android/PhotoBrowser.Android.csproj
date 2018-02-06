@@ -140,6 +140,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImageOverlayView.cs" />
     <Compile Include="PhotoBrowserImplementation.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />

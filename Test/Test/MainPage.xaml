@@ -5,11 +5,9 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                      >
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
             <Button Text="Show Gallery"
                     Clicked="OnClickedShowGallery"
+                    VerticalOptions="Center"
                     />
         </StackLayout>
     </ContentPage.Content>

@@ -64,6 +64,7 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyMWPhotoBrower.cs" />
     <Compile Include="PhotoBrowserImplementation.cs" />
     <Compile Include="Platform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

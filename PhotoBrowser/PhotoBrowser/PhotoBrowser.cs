@@ -7,7 +7,11 @@ namespace Stormlion.PhotoBrowser
 {
     public class PhotoBrowser
     {
-        public List<string> Images { get; set; }
+        public List<Photo> Photos { get; set; }
+
+        public Action<int> ActionButtonPressed { get; set; }
+
+        public ImageSource ActionIcon { get; set; }
 
         public void Show()
         {
