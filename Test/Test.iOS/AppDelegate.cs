@@ -22,6 +22,8 @@ namespace Test.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Stormlion.PhotoBrowser.iOS.Platform.Init();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

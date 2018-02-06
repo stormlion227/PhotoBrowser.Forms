@@ -34,6 +34,15 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ricardo.MBProgressHUD.iOS, Version=1.0.6557.19358, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ricardo.MBProgressHUD.iOS.1.1.0\lib\Xamarin.iOS10\Ricardo.MBProgressHUD.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Ricardo.MWPhotoBrowser.iOS, Version=1.0.6558.37446, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ricardo.MWPhotoBrowser.iOS.2.1.4.1\lib\Xamarin.iOS10\Ricardo.MWPhotoBrowser.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Ricardo.SDWebImage.iOS, Version=1.0.6558.37233, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Ricardo.SDWebImage.iOS.4.2.2.1\lib\Xamarin.iOS10\Ricardo.SDWebImage.iOS.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -55,6 +64,8 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PhotoBrowserImplementation.cs" />
+    <Compile Include="Platform.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
