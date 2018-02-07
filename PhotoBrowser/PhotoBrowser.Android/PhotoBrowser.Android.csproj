@@ -149,6 +149,9 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
+    <AndroidResource Include="Resources\layout\photo_browser_overlay.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Binding\Android\FrescoImageViewer\FrescoImageViewer.csproj">
@@ -163,6 +166,9 @@
       <Project>{25b09430-f62b-4243-8fe9-3e66722ae25f}</Project>
       <Name>PhotoBrowser</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\btn_action_photobrowser_overlay.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

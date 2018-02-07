@@ -11,10 +11,6 @@ namespace Stormlion.PhotoBrowser
 
         public Action<int> ActionButtonPressed { get; set; }
 
-        public ImageSource ActionIcon { get; set; }
-
-        public bool AlwaysShowControls { get; set; } = false;
-
         public int StartIndex { get; set; } = 0;
 
         public void Show()

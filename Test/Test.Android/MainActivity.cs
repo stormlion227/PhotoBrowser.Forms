@@ -22,7 +22,15 @@ namespace Test.Droid
             Stormlion.PhotoBrowser.Droid.Platform.Init(this);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+            try
+            {
+                LoadApplication(new App());
+            }
+            catch(Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
+            }
+            
         }
     }
 }

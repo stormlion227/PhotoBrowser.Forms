@@ -17,7 +17,12 @@ namespace Stormlion.PhotoBrowser.Droid
     {
         public void Show(PhotoBrowser photoBrowser)
         {
-            new ImageViewer.Builder(Platform.Context, photoBrowser.Images).Show();
+            ImageViewer.Builder builder = new ImageViewer.Builder(Platform.Context, photoBrowser.Photos.Select(x => x.URL).ToArray());
+            ImageOverlayView overlay = new ImageOverlayView(Platform.Context, photoBrowser);
+            builder.SetOverlayView(overlay);
+            builder.SetImageChangeListener(overlay);
+            builder.SetStartPosition(photoBrowser.StartIndex);
+            builder.Show();
         }
     }
 }
