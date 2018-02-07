@@ -27,6 +27,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Android", "Android", "{7F54
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrescoImageViewer", "Binding\Android\FrescoImageViewer\FrescoImageViewer.csproj", "{5BF83DCA-6A9B-44C7-9043-33020A623351}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F6A5594-D27B-4061-A168-3F33F48129CD}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.md = LICENSE.md
+		nuget.nuspec = nuget.nuspec
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
