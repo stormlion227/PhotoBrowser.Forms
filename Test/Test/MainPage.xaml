@@ -5,9 +5,15 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                      >
-            <Button Text="Show Gallery"
+            <Label Text="PhotoBrowser Sample"
+                   FontSize="Large"
+                   HorizontalTextAlignment="Center"
+                   Margin="20, 50, 20, 20"
+                   />
+            <Button Text="Show Photo Gallery"
                     Clicked="OnClickedShowGallery"
                     VerticalOptions="Center"
+                    Margin="20, 20, 20, 20"
                     />
         </StackLayout>
     </ContentPage.Content>
