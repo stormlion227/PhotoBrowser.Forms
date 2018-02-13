@@ -27,7 +27,7 @@ Supports Android and iOS.
 
 In MainActivity.cs file
 
-```
+```cs
     Stormlion.PhotoBrowser.Droid.Platform.Init(this);
 ```
 
@@ -35,12 +35,12 @@ In MainActivity.cs file
 
 In AppDelegate.cs file
 
-```
+```cs
     Stormlion.PhotoBrowser.iOS.Platform.Init();
 ```
 ## Usage
 
-```
+```cs
     new PhotoBrowser
     {
         Photos = new List<Photo>
