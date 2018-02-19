@@ -1,20 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Test.MainPage">
+<ContentPage x:Class="Test.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical"
-                     >
-            <Label Text="PhotoBrowser Sample"
+        <StackLayout Orientation="Vertical">
+            <Label Margin="20,50,20,20"
                    FontSize="Large"
                    HorizontalTextAlignment="Center"
-                   Margin="20, 50, 20, 20"
-                   />
-            <Button Text="Show Photo Gallery"
+                   Text="PhotoBrowser Sample" />
+            <Button Margin="20,20,20,20"
                     Clicked="OnClickedShowGallery"
-                    VerticalOptions="Center"
-                    Margin="20, 20, 20, 20"
-                    />
+                    Text="Show Photo Gallery"
+                    VerticalOptions="Center" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
