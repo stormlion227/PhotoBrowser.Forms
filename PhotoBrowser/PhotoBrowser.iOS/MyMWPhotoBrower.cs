@@ -24,7 +24,11 @@ namespace Stormlion.PhotoBrowser.iOS
             foreach (Photo p in _photoBrowser.Photos)
             {
                 MWPhoto mp = MWPhoto.FromUrl(new Foundation.NSUrl(p.URL));
-                mp.Caption = p.Title;
+
+                if(!string.IsNullOrWhiteSpace(p.Title))
+                {
+                    mp.Caption = p.Title;
+                }
 
                 _photos.Add(mp);
             }

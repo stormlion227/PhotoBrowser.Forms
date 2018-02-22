@@ -35,10 +35,18 @@ namespace Stormlion.PhotoBrowser.Droid
             View view = Inflate(Context, Resource.Layout.photo_browser_overlay, this);
             tvDescription = view.FindViewById<TextView>(Resource.Id.tvDescription);
             btnAction = view.FindViewById<ImageButton>(Resource.Id.btnShare);
-            btnAction.Click += (o, e) =>
+
+            if(_photoBrowser.ActionButtonPressed != null)
             {
-                _photoBrowser.ActionButtonPressed?.Invoke(_currentIndex);
-            };
+                btnAction.Click += (o, e) =>
+                {
+                    _photoBrowser.ActionButtonPressed?.Invoke(_currentIndex);
+                };
+            }
+            else
+            {
+                btnAction.Visibility = ViewStates.Gone;
+            }
         }
 
         public void OnImageChange(int p0)
