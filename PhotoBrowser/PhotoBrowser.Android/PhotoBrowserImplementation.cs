@@ -15,6 +15,8 @@ namespace Stormlion.PhotoBrowser.Droid
 {
     public class PhotoBrowserImplementation : IPhotoBrowser
     {
+        protected static ImageViewer _imageViewer;
+
         public void Show(PhotoBrowser photoBrowser)
         {
             ImageViewer.Builder builder = new ImageViewer.Builder(Platform.Context, photoBrowser.Photos.Select(x => x.URL).ToArray());
@@ -22,7 +24,16 @@ namespace Stormlion.PhotoBrowser.Droid
             builder.SetOverlayView(overlay);
             builder.SetImageChangeListener(overlay);
             builder.SetStartPosition(photoBrowser.StartIndex);
-            builder.Show();
+            _imageViewer = builder.Show();
+        }
+
+        public void Close()
+        {
+            if(_imageViewer != null)
+            {
+                _imageViewer.OnDismiss();
+                _imageViewer = null;
+            }
         }
     }
 }

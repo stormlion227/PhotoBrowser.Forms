@@ -17,5 +17,10 @@ namespace Stormlion.PhotoBrowser
         {
             DependencyService.Get<IPhotoBrowser>().Show(this);
         }
+
+        public static void Close()
+        {
+            DependencyService.Get<IPhotoBrowser>().Close();
+        }
     }
 }

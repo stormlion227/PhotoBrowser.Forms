@@ -74,6 +74,7 @@ namespace Test
                 ActionButtonPressed = (index) =>
                 {
                     Debug.WriteLine($"Clicked {index}");
+                    PhotoBrowser.Close();
                 }
             }.Show();
         }

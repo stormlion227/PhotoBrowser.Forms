@@ -7,5 +7,7 @@ namespace Stormlion.PhotoBrowser
     public interface IPhotoBrowser
     {
         void Show(PhotoBrowser photoBrowser);
+
+        void Close();
     }
 }

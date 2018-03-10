@@ -49,5 +49,10 @@ namespace Stormlion.PhotoBrowser.iOS
         {
             _photoBrowser.ActionButtonPressed?.Invoke((int)index);
         }
+
+        public void Close()
+        {
+            UIApplication.SharedApplication.KeyWindow.RootViewController.DismissViewController(true, null);
+        }
     }
 }
