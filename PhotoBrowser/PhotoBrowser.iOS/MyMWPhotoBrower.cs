@@ -37,6 +37,7 @@ namespace Stormlion.PhotoBrowser.iOS
 
             browser.DisplayActionButton = _photoBrowser.ActionButtonPressed != null;
             browser.SetCurrentPhoto((nuint)_photoBrowser.StartIndex);
+            browser.EnableGrid = _photoBrowser.EnableGrid;
 
             UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(new UINavigationController(browser), true, null);
         }

@@ -13,6 +13,8 @@ namespace Stormlion.PhotoBrowser
 
         public int StartIndex { get; set; } = 0;
 
+        public bool EnableGrid { get; set; }
+
         public void Show()
         {
             DependencyService.Get<IPhotoBrowser>().Show(this);
