@@ -122,7 +122,7 @@
     <PackageReference Include="Ricardo.MWPhotoBrowser.iOS">
       <Version>2.1.4.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="3.0.0.446417" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
