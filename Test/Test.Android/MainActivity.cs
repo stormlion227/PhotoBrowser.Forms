@@ -1,11 +1,7 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using System;
 
 namespace Test.Droid
 {
@@ -26,12 +22,10 @@ namespace Test.Droid
             {
                 LoadApplication(new App());
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
-            
         }
     }
 }
-
