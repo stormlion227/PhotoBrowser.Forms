@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>PhotoBrowser.Forms</id>
-    <version>0.1.3</version>
+    <version>0.1.4</version>
     <authors>Marko Rothstein</authors>
     <owners>Marko Rothstein</owners>
     <projectUrl>https://github.com/stormlion227/PhotoBrowser.Forms</projectUrl>
@@ -15,7 +15,7 @@
     <tags>xamarin forms photo image pinch zoom swipe dismiss MWPhotoBrowser FrescoImageViewer</tags>
     <dependencies>
       <group>
-        <dependency id="Xamarin.Forms" version="2.5.0"/>
+        <dependency id="Xamarin.Forms" version="3.4.0"/>
       </group>
       <group targetFramework="monoandroid">
         <dependency id="Naxam.Fresco.Droid" version="1.5.0" />
