@@ -71,11 +71,11 @@ namespace Test
                         Title = "Daniel"
                     }
                 },
-                //ActionButtonPressed = (index) =>
-                //{
-                //    Debug.WriteLine($"Clicked {index}");
-                //    PhotoBrowser.Close();
-                //},
+                ActionButtonPressed = (index) =>
+                {
+                    Debug.WriteLine($"Clicked {index}");
+                    PhotoBrowser.Close();
+                },
                 EnableGrid = true,
                 BackgroundColor = Color.White,
                 DidDisplayPhoto = (index) =>
