@@ -11,13 +11,13 @@ using Xamarin.Forms.Xaml;
 
 namespace Test
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class MainPage : ContentPage
-	{
-		public MainPage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MainPage : ContentPage
+    {
+        public MainPage()
+        {
+            InitializeComponent();
+        }
 
         protected void OnClickedShowGallery(object sender, EventArgs e)
         {
@@ -71,11 +71,20 @@ namespace Test
                         Title = "Daniel"
                     }
                 },
-                ActionButtonPressed = (index) =>
+                //ActionButtonPressed = (index) =>
+                //{
+                //    Debug.WriteLine($"Clicked {index}");
+                //    PhotoBrowser.Close();
+                //},
+                EnableGrid = true,
+                BackgroundColor = Color.White,
+                DidDisplayPhoto = (index) =>
                 {
-                    Debug.WriteLine($"Clicked {index}");
-                    PhotoBrowser.Close();
-                }
+                    Debug.WriteLine($"Selection changed: {index}");
+                },
+
+                Android_ContainerPaddingPx = 20,
+                iOS_ZoomPhotosToFill = false
             }.Show();
         }
     }

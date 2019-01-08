@@ -793,13 +793,7 @@ namespace Test.Droid
 			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.abc_textfield_search_material = global::Test.Droid.Resource.Drawable.abc_textfield_search_material;
 			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.abc_vector_test = global::Test.Droid.Resource.Drawable.abc_vector_test;
 			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.avd_hide_password = global::Test.Droid.Resource.Drawable.avd_hide_password;
-			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.avd_hide_password_1 = global::Test.Droid.Resource.Drawable.avd_hide_password_1;
-			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.avd_hide_password_2 = global::Test.Droid.Resource.Drawable.avd_hide_password_2;
-			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.avd_hide_password_3 = global::Test.Droid.Resource.Drawable.avd_hide_password_3;
 			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.avd_show_password = global::Test.Droid.Resource.Drawable.avd_show_password;
-			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.avd_show_password_1 = global::Test.Droid.Resource.Drawable.avd_show_password_1;
-			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.avd_show_password_2 = global::Test.Droid.Resource.Drawable.avd_show_password_2;
-			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.avd_show_password_3 = global::Test.Droid.Resource.Drawable.avd_show_password_3;
 			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.btn_action_photobrowser_overlay = global::Test.Droid.Resource.Drawable.btn_action_photobrowser_overlay;
 			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::Test.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Stormlion.PhotoBrowser.Droid.Resource.Drawable.design_fab_background = global::Test.Droid.Resource.Drawable.design_fab_background;
@@ -4772,26 +4766,8 @@ namespace Test.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020131
-			public const int avd_hide_password_1 = 2130837809;
-			
-			// aapt resource value: 0x7f020132
-			public const int avd_hide_password_2 = 2130837810;
-			
-			// aapt resource value: 0x7f020133
-			public const int avd_hide_password_3 = 2130837811;
-			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
-			
-			// aapt resource value: 0x7f020134
-			public const int avd_show_password_1 = 2130837812;
-			
-			// aapt resource value: 0x7f020135
-			public const int avd_show_password_2 = 2130837813;
-			
-			// aapt resource value: 0x7f020136
-			public const int avd_show_password_3 = 2130837814;
 			
 			// aapt resource value: 0x7f020055
 			public const int btn_action_photobrowser_overlay = 2130837589;

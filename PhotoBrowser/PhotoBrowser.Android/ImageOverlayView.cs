@@ -53,6 +53,9 @@ namespace Stormlion.PhotoBrowser.Droid
         {
             tvDescription.Text = _photoBrowser.Photos[p0].Title;
             _currentIndex = p0;
+
+            _photoBrowser.DidDisplayPhoto?.Invoke(p0);
+
         }
     }
 }

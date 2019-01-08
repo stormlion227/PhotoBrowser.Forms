@@ -1,8 +1,10 @@
 ﻿using Ricardo.LibMWPhotoBrowser.iOS;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 using UIKit;
+using Xamarin.Forms.Platform.iOS;
 
 namespace Stormlion.PhotoBrowser.iOS
 {
@@ -25,19 +27,27 @@ namespace Stormlion.PhotoBrowser.iOS
             {
                 MWPhoto mp = MWPhoto.FromUrl(new Foundation.NSUrl(p.URL));
 
-                if(!string.IsNullOrWhiteSpace(p.Title))
-                {
+                if (!string.IsNullOrWhiteSpace(p.Title))
                     mp.Caption = p.Title;
-                }
-
+                
                 _photos.Add(mp);
             }
 
-            MWPhotoBrowser browser = new MWPhotoBrowser(this);
+            MWPhotoBrowser browser = new MWPhotoBrowser(this)
+            {
+                EnableGrid = _photoBrowser.EnableGrid,
 
-            browser.DisplayActionButton = _photoBrowser.ActionButtonPressed != null;
+                BrowserBackgroundColor = _photoBrowser.BackgroundColor.ToUIColor(),
+                
+                DisplayActionButton = _photoBrowser.ActionButtonPressed != null,
+
+                ZoomPhotosToFill = _photoBrowser.iOS_ZoomPhotosToFill
+
+            };
+
+            
             browser.SetCurrentPhoto((nuint)_photoBrowser.StartIndex);
-            browser.EnableGrid = _photoBrowser.EnableGrid;
+
 
             UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(new UINavigationController(browser), true, null);
         }
@@ -46,10 +56,17 @@ namespace Stormlion.PhotoBrowser.iOS
 
         public override nuint NumberOfPhotosInPhotoBrowser(MWPhotoBrowser photoBrowser) => (nuint)_photos.Count;
 
+
         public override void OnActionButtonPressed(MWPhotoBrowser photoBrowser, nuint index)
         {
             _photoBrowser.ActionButtonPressed?.Invoke((int)index);
         }
+
+        public override void DidDisplayPhoto(MWPhotoBrowser photoBrowser, nuint index)
+        {
+            _photoBrowser.DidDisplayPhoto?.Invoke((int)index);
+        }
+
 
         public void Close()
         {
