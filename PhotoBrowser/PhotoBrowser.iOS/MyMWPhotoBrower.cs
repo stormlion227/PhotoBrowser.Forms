@@ -39,7 +39,14 @@ namespace Stormlion.PhotoBrowser.iOS
             browser.SetCurrentPhoto((nuint)_photoBrowser.StartIndex);
             browser.EnableGrid = _photoBrowser.EnableGrid;
 
-            UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(new UINavigationController(browser), true, null);
+            var window = UIApplication.SharedApplication.KeyWindow;
+            var vc = window.RootViewController;
+            while (vc.PresentedViewController != null)
+            {
+                vc = vc.PresentedViewController;
+            }
+            
+            vc.PresentViewController(new UINavigationController(browser), true, null);
         }
 
         public override MWPhoto GetPhoto(MWPhotoBrowser photoBrowser, nuint index) => _photos[(int)index];
