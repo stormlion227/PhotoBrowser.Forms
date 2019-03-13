@@ -64,7 +64,16 @@ In AppDelegate.cs file
         ActionButtonPressed = (index) =>
         {
             Debug.WriteLine($"Clicked {index}");
-        }
+        },
+		
+		BackgroundColor = Color.White,
+		DidDisplayPhoto = (index) =>
+		{
+			Debug.WriteLine($"Selection changed: {index}");
+		},
+
+		Android_ContainerPaddingPx = 20,
+		iOS_ZoomPhotosToFill = false		
     }.Show();
 ```
 

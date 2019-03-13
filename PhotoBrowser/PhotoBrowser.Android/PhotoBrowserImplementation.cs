@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Xamarin.Forms.Platform.Android;
 
 namespace Stormlion.PhotoBrowser.Droid
 {
@@ -21,7 +22,14 @@ namespace Stormlion.PhotoBrowser.Droid
         {
             ImageViewer.Builder builder = new ImageViewer.Builder(Platform.Context, photoBrowser.Photos.Select(x => x.URL).ToArray());
             ImageOverlayView overlay = new ImageOverlayView(Platform.Context, photoBrowser);
+
+            
+            
+            builder.SetBackgroundColor(ColorExtensions.ToAndroid(photoBrowser.BackgroundColor));
+
             builder.SetOverlayView(overlay);
+            builder.SetContainerPaddingPx(photoBrowser.Android_ContainerPaddingPx);
+
             builder.SetImageChangeListener(overlay);
             builder.SetStartPosition(photoBrowser.StartIndex);
             _imageViewer = builder.Show();
@@ -29,7 +37,7 @@ namespace Stormlion.PhotoBrowser.Droid
 
         public void Close()
         {
-            if(_imageViewer != null)
+            if (_imageViewer != null)
             {
                 _imageViewer.OnDismiss();
                 _imageViewer = null;
